@@ -1,0 +1,3 @@
+| TC_ID | Module | Scenario    | Expected       |
+| ----- | ------ | ----------- | -------------- |
+| TC001 | Login  | Valid Login | User Logged In |

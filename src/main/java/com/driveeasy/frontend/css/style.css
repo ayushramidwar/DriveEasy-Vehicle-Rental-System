@@ -1,0 +1,31 @@
+.hero{
+background: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70")
+center/center no-repeat;
+
+color:white;
+padding:120px 0;
+}
+
+.hero h1{
+font-size:3rem;
+font-weight:bold;
+}
+.card{
+transition: 0.3s;
+}
+.card:hover{
+transform:scale(1.03);
+}
+.vehicle-image{
+    height:220px;
+    object-fit:cover;
+}
+
+.vehicle-card{
+    transition:0.3s;
+}
+
+.vehicle-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0px 8px 20px rgba(0,0,0,0.2);
+}

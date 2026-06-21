@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+    <title>User Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<script>
+    const user = JSON.parse(localStorage.getItem("loggedUser");
+    if(user){
+    document.getElementById("welcomeUser").innerHTML = "Welcome " + user.name;
+    }
+</script>
+<body>
+<div class="container mt-5">
+    <h2 id="welcomeUser"></h2>
+
+    <hr>
+    <h3>
+        My Bookings
+    </h3>
+
+    <table class="table table-bashboard table-striped">
+        <thead>
+        <tr>
+            <th>Booking ID</th>
+            <th>Vehicle</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>BK1025</td>
+            <td>Creta</td>
+            <td>10-jun-2026</td>
+            <td>13-jun-2026</td>
+            <td>
+                <span class="badge bg-success">
+                    Active
+                </span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Bk1026</td>
+            <td>Swift</td>
+            <td>01-jun-2026</td>
+            <td>05-jun-2026</td>
+            <td>
+                <span class="badge bg-secondary">
+                    Completed
+                </span>
+            </td>
+        </tr>
+
+        </tbody>
+
+    </table>
+
+    <button
+            onclick="logout()"
+            class="btn btn-danger">
+
+        Logout
+
+    </button>
+</div>
+</body>
+<script>
+    function logout(){
+    localStorage.clear();
+    window.location.href = "login.html";
+    }
+</script>
+</html>
